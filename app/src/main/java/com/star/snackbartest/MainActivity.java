@@ -1,11 +1,14 @@
 package com.star.snackbartest;
 
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.google.android.material.snackbar.BaseTransientBottomBar;
+import com.google.android.material.snackbar.Snackbar;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,6 +30,6 @@ public class MainActivity extends AppCompatActivity {
                 .setAction("点击事件",
                         v -> Toast.makeText(this, "Toast",
                                 Toast.LENGTH_LONG).show())
-                .setDuration(Snackbar.LENGTH_LONG).show();
+                .setDuration(BaseTransientBottomBar.LENGTH_SHORT).show();
     }
 }
